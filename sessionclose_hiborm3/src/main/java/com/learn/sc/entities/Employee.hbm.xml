@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.learn.sc.entities">
+	<class name="Employee" table="emp">
+		<id name="EmployeeId" column="empid"/>
+		<property name="Dept" column="dept"/>
+		<property name="dobDate" column="dobtest"/>
+		<property name="dateOfJoining" column="joining_date"/>
+		<property name="joiningTime" column="joining_time"/>
+		<property name="name"/>
+		<property name="salary" column="sal"/>
+	</class>
+</hibernate-mapping>
