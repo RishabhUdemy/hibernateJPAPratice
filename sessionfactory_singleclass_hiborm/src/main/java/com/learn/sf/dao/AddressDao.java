@@ -13,9 +13,15 @@ public class AddressDao {
 		SessionFactory sessionFactory = null;
 		Address address = null;
 		
-		sessionFactory = SessionFactoryRegistry.getInstance();
-		session = sessionFactory.openSession();
-		address = session.get(Address.class, addressNo);
-		return address;
+		try {
+			sessionFactory = SessionFactoryRegistry.getInstance();
+			session = sessionFactory.openSession();
+			address = session.get(Address.class, addressNo);
+			return address;
+		}finally {
+			if(session != null) {
+				session.close();
+			}
+		}
 	}
 }
