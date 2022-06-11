@@ -2,7 +2,9 @@ How many object of the connection we need to create per an application?
 
 Connection should not be singleton class, we should not share the connection object between multiple class of our application.
 
-because connection represent a session to the database and all the operation we do on database will be tracked based on connection/session we are holding commit/rollback opeation take place based on the transaction we carried using the connection object, sharing the same connection across multiple opeations of our application result in inconsistency.
+because connection represent a session to the database and all the operation we do on database will be tracked based on connection/session we are holding commit/rollback
+opeation take place based on the transaction we carried using the connection object, sharing the same connection across multiple opeations of our application result 
+in data inconsistency.
 If a class close a connection then the rest of the classes using the connection will be lost.
 
 We should always create a connection per operation level and at the end of the operation we should close connection to release the resource.
