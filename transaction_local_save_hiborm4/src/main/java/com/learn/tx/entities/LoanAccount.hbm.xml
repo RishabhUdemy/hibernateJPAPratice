@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.learn.tx.entities">
+	<class name="LoanAccount" table="loan">
+		<id name="loanNo" column="loan_no"/>
+		<property name="loanAccountHolderName" column="loan_acc_holder_nm"/>
+		<property name="loanType" column="loan_type"/>
+		<property name="loanAmount" column="loan_amount"/>
+	</class>
+</hibernate-mapping>
