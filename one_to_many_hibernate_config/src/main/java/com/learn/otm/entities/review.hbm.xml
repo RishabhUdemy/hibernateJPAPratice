@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.learn.otm.entities">
+	<class name="Review" table="review">
+		<id name="reviewNo" column="review_no">
+			<generator class="increment"/>
+		</id>
+		<property name="rating"/>
+		<property name="comment"/>
+		<property name="reviewPostedDate" column="review_posted_date"/>
+		<property name="reviewBy" column="review_by"/>
+	</class>
+</hibernate-mapping>

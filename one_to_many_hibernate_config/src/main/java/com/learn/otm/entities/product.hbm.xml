@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.learn.otm.entities">
+	<class name="Product" table="product">
+		<id name="productNo" column="product_no">
+			<generator class="increment"/>
+		</id>
+		<property name="productName" column="product_name"/>
+		<property name="description"/>
+		<property name="manufacture" />
+		<property name="amount"/>
+		<set name="productReviews" >
+			<key column="product_no" not-null="false"/>
+			<one-to-many class="Review"/>
+		</set>
+	</class>
+</hibernate-mapping>
