@@ -42,6 +42,7 @@ public class OneToManyListTest {
 		taskList.add(task2);
 		
 		member.setAssignedTasks(taskList);
-		
+		memberDao = new MemberDao();
+		memberDao.saveMemberDetail(member);
 	}
 }
